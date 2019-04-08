@@ -110,7 +110,7 @@ namespace PictureCode2_Revers
 					numbers_str[i] = numbers_str[i].Trim(Environment.NewLine.ToCharArray());
 					numbers_str[i] = numbers_str[i].Trim();
 				}
-			//	try {
+				try {
 					
 					for(int i = 0; i < numbers_str.Length; i++)
 						values_list.Add(Convert.ToByte(numbers_str[i], 16));
@@ -146,10 +146,10 @@ namespace PictureCode2_Revers
 						}
 					}
 					
-			/*	} catch (Exception) {
+				} catch (Exception) {
 					
 					MessageBox.Show("Неверная строка ввода/не введены размеры изображения", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-				}*/
+				}
 				pictureBox.Image = pict2;
 				values_list.Clear();
 			}
@@ -159,6 +159,8 @@ namespace PictureCode2_Revers
 			saveFileDialog1.Filter = "Bitmap|*.bmp";
 			if(saveFileDialog1.ShowDialog() == DialogResult.OK)
 			{
+				if(comboBox1.SelectedIndex == 1)
+					pict = pict2;
 				pict.Save(saveFileDialog1.FileName);
 			}
 		}
