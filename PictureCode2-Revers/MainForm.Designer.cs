@@ -24,6 +24,7 @@ namespace PictureCode2_Revers
 		private System.Windows.Forms.Label label2;
 		private System.Windows.Forms.CheckBox checkBox1;
 		private System.Windows.Forms.SaveFileDialog saveFileDialog1;
+		private System.Windows.Forms.ComboBox comboBox1;
 		
 		/// <summary>
 		/// Disposes resources used by the form.
@@ -57,6 +58,7 @@ namespace PictureCode2_Revers
 			this.label2 = new System.Windows.Forms.Label();
 			this.checkBox1 = new System.Windows.Forms.CheckBox();
 			this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
+			this.comboBox1 = new System.Windows.Forms.ComboBox();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox)).BeginInit();
 			this.SuspendLayout();
 			// 
@@ -137,11 +139,23 @@ namespace PictureCode2_Revers
 			this.checkBox1.UseVisualStyleBackColor = true;
 			this.checkBox1.CheckedChanged += new System.EventHandler(this.CheckBox1CheckedChanged);
 			// 
+			// comboBox1
+			// 
+			this.comboBox1.FormattingEnabled = true;
+			this.comboBox1.Items.AddRange(new object[] {
+			"Line",
+			"Row"});
+			this.comboBox1.Location = new System.Drawing.Point(415, 265);
+			this.comboBox1.Name = "comboBox1";
+			this.comboBox1.Size = new System.Drawing.Size(75, 21);
+			this.comboBox1.TabIndex = 9;
+			// 
 			// MainForm
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(816, 298);
+			this.Controls.Add(this.comboBox1);
 			this.Controls.Add(this.checkBox1);
 			this.Controls.Add(this.label2);
 			this.Controls.Add(this.label1);
